@@ -14,11 +14,18 @@
                         </div>
                     @endif
 
-                    <ul>
+                    <table>
+                        <tr>
+                            <th>Title</th>
+                            <th>Status</th>
+                        </tr>
                         @foreach($user->todos as $todo)
-                            <li>{{ $todo->title }}</li>
+                            <tr>
+                               <td>{{ $todo->title }}</td>
+                               <td>{{ $todo->is_done ? 'Done' : 'Not done' }}</td>
+                            </tr>
                         @endforeach
-                    </ul>
+                    </table>
                 </div>
             </div>
         </div>
