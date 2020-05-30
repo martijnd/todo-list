@@ -1,4 +1,5 @@
 # Todo list
+Simple app to try out any new features of Laravel 7
 
 ## Tables
 
@@ -12,7 +13,7 @@
 |     | email_verified_at | timestamp     |
 |     | password          | string        |
 
-Timetamps, Soft-deletes
+Timestamps, Soft-deletes
 
 **Todos**
 
@@ -22,3 +23,5 @@ Timetamps, Soft-deletes
 | FK  | user_id | bigInteger |
 |     | title   | string     |
 |     | is_done | boolean    |
+
+Timestamps, Soft-deletes
