@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Todo;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class HomeController extends Controller
+class IndexController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,6 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user = Auth::user()->load('todos');
+
+        return view('index')->with(compact('user'));
     }
 }
